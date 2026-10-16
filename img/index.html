@@ -1,0 +1,320 @@
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <!-- Configurações básicas da página -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Descrição exibida em mecanismos de busca -->
+    <meta name="description"
+        content="GD Lava Car: lavagem automotiva, polimento, vitrificação e muito mais. Consulte nossos serviços pelo WhatsApp.">
+
+    <meta name="theme-color" content="#111111">
+
+    <!-- Título que aparece na aba do navegador -->
+    <title>GD Lava Car | Lavagem e Estética Automotiva</title>
+
+    <!-- Conexão com o arquivo CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Fonte utilizada no site -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+        <script src="script.js"></script>
+</head>
+
+<body>
+
+    <!-- ==========================================
+         CABEÇALHO: LOGO, MENU E BOTÃO DE AGENDAMENTO
+    =========================================== -->
+    <header class="cabecalho">
+
+        <div class="container navegacao">
+
+            <!-- Logo do estabelecimento -->
+            <a href="#inicio" class="logo">
+                <img src="img/logo-gd.png" alt="Logo GD Lava Car">
+            </a>
+
+            <!-- Menu de navegação entre as seções -->
+            <nav class="menu" id="menu">
+                <a href="#inicio">Início</a>
+                <a href="#servicos">Serviços</a>
+                <a href="#antes-depois">Antes e depois</a>
+                <a href="#trabalhos">Galeria</a>
+                <a href="#localizacao">Localização</a>
+                <a href="#contato">Contato</a>
+            </nav>
+
+            <!-- Atalho para conversar pelo WhatsApp -->
+            <a href="https://wa.me/43999065643" class="botao botao-menu" target="_blank" rel="noopener noreferrer">
+                Agendar lavagem
+            </a>
+
+            <!-- Botão do menu para telas pequenas.
+                 O JavaScript será responsável por abrir e fechar o menu. -->
+            <button class="menu-mobile" id="menu-mobile" aria-label="Abrir menu" aria-expanded="false"
+                aria-controls="menu">
+                ☰
+            </button>
+
+        </div>
+    </header>
+
+
+    <!-- CONTEÚDO PRINCIPAL DO SITE -->
+    <main>
+
+        <!-- ==========================================
+             1. DESTAQUE PRINCIPAL
+             Primeira seção que o visitante visualiza
+        =========================================== -->
+        <section class="hero" id="inicio">
+
+            <div class="container hero-conteudo">
+
+                <span class="subtitulo">GD LAVA CAR</span>
+
+                <h1>
+                    Seu carro limpo.<br>
+                    <span>Seu brilho renovado.</span>
+                </h1>
+
+                <p>
+                    Da lavagem simples à estética automotiva:
+                    cuidado e dedicação para deixar seu carro
+                    com uma aparência incrível.
+                </p>
+
+                <!-- Botões principais da primeira seção -->
+                <div class="hero-botoes">
+
+                    <a href="https://wa.me/43999065643" class="botao" target="_blank" rel="noopener noreferrer">
+                        Agendar pelo WhatsApp
+                    </a>
+
+                    <a href="#servicos" class="botao botao-secundario">
+                        Conhecer os serviços
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             2. DIFERENCIAIS
+             Pequenos destaques do estabelecimento
+        =========================================== -->
+        <section class="diferenciais">
+
+            <div class="container diferenciais-grid">
+
+                <article class="diferencial">
+                    <span class="icone" aria-hidden="true">✦</span>
+                    <h3>Cuidado nos detalhes</h3>
+                    <p>Atenção ao veículo durante o serviço.</p>
+                </article>
+
+                <article class="diferencial">
+                    <span class="icone" aria-hidden="true">🚘</span>
+                    <h3>Estética automotiva</h3>
+                    <p>Opções de lavagem e cuidado para seu carro.</p>
+                </article>
+
+                <article class="diferencial">
+                    <span class="icone" aria-hidden="true">✓</span>
+                    <h3>Orçamento fácil</h3>
+                    <p>Consulte os valores pelo WhatsApp.</p>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             3. SERVIÇOS
+             Apresenta os sete serviços oferecidos
+        =========================================== -->
+        <section class="secao servicos" id="servicos">
+
+            <div class="container">
+
+                <div class="titulo-secao">
+                    <span class="subtitulo">NOSSOS SERVIÇOS</span>
+
+                    <h2>
+                        Cuidado que faz <span>a diferença</span>
+                    </h2>
+
+                    <p>
+                        Conheça nossas opções de lavagem
+                        e estética automotiva.
+                    </p>
+                </div>
+
+                <!-- Grade que organiza os cards de serviços -->
+                <div class="servicos-grid">
+
+                    <!-- Serviço 1: lavagem simples -->
+                    <article class="card-servico">
+
+                        <div class="servico-icone" aria-hidden="true">🚗</div>
+
+                        <h3>Lavagem Simples</h3>
+
+                        <p>
+                            Para manter seu veículo limpo
+                            no dia a dia.
+                        </p>
+
+                        <a href="https://wa.me/43999065643?text=Ol%C3%A1%21%20Quero%20consultar%20o%20valor%20da%20lavagem%20simples."
+                            target="_blank" rel="noopener noreferrer">
+                            Consultar valor →
+                        </a>
+
+                    </article>
+
+
+                    <!-- Serviço 2: lavagem premium -->
+                    <article class="card-servico">
+
+                        <div class="servico-icone" aria-hidden="true">✨</div>
+
+                        <h3>Lavagem Premium</h3>
+
+                        <p>
+                            Consulte os detalhes dessa opção
+                            de lavagem para seu veículo.
+                        </p>
+
+                        <a href="https://wa.me/43999065643?text=Ol%C3%A1%21%20Quero%20consultar%20o%20valor%20da%20lavagem%20premium."
+                            target="_blank" rel="noopener noreferrer">
+                            Consultar valor →
+                        </a>
+
+                    </article>
+
+
+                    <!-- Serviço 3: lavagem americana -->
+                    <article class="card-servico">
+
+                        <div class="servico-icone" aria-hidden="true">💦</div>
+
+                        <h3>Lavagem Americana</h3>
+
+                        <p>
+                            Consulte as condições e os detalhes
+                            dessa modalidade de lavagem.
+                        </p>
+
+                        <a href="https://wa.me/43999065643?text=Ol%C3%A1%21%20Quero%20consultar%20o%20valor%20da%20lavagem%20americana."
+                            target="_blank" rel="noopener noreferrer">
+                            Consultar valor →
+                        </a>
+
+                    </article>
+
+
+                    <!-- Serviço 4: lavagem detalhada -->
+                    <article class="card-servico">
+
+                        <div class="servico-icone" aria-hidden="true">🧽</div>
+
+                        <h3>Lavagem Detalhada</h3>
+
+                        <p>
+                            Uma opção para quem procura
+                            atenção especial aos detalhes.
+                        </p>
+
+                        <a href="https://wa.me/43999065643?text=Ol%C3%A1%21%20Quero%20consultar%20o%20valor%20da%20lavagem%20detalhada."
+                            target="_blank" rel="noopener noreferrer">
+                            Consultar valor →
+                        </a>
+
+                    </article>
+
+
+                    <!-- Serviço 5: polimento automotivo -->
+                    <article class="card-servico">
+
+                        <div class="servico-icone" aria-hidden="true">💎</div>
+
+                        <h3>Polimento</h3>
+
+                        <p>
+                            Consulte as opções de polimento
+                            disponíveis para seu veículo.
+                        </p>
+
+                        <a href="https://wa.me/43999065643?text=Ol%C3%A1%21%20Quero%20consultar%20o%20valor%20do%20polimento%20automotivo."
+                            target="_blank" rel="noopener noreferrer">
+                            Consultar valor →
+                        </a>
+
+                    </article>
+
+
+                    <!-- Serviço 6: vitrificação -->
+                    <article class="card-servico">
+
+                        <div class="servico-icone" aria-hidden="true">🛡️</div>
+
+                        <h3>Vitrificação</h3>
+
+                        <p>
+                            Consulte as opções de proteção
+                            para a pintura do seu carro.
+                        </p>
+
+                        <a href="https://wa.me/43999065643?text=Ol%C3%A1%21%20Quero%20consultar%20o%20valor%20da%20vitrifica%C3%A7%C3%A3o."
+                            target="_blank" rel="noopener noreferrer">
+                            Consultar valor →
+                        </a>
+
+                    </article>
+
+
+                    <!-- Serviço 7: polimento de farol -->
+                    <article class="card-servico">
+
+                        <div class="servico-icone" aria-hidden="true">💡</div>
+
+                        <h3>Polimento de Farol</h3>
+
+                        <p>
+                            Serviço voltado à recuperação
+                            da aparência dos faróis.
+                        </p>
+
+                        <a href="https://wa.me/43999065643?text=Ol%C3%A1%21%20Quero%20consultar%20o%20valor%20do%20polimento%20de%20farol."
+                            target="_blank" rel="noopener noreferrer">
+                            Consultar valor →
+                        </a>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             4. PROMOÇÃO PARA MOTORISTAS DE UBER
+             Valor divulgado no anúncio enviado
+        =========================================== -->
+        <section class="promocao">
+
+            <div class="container promocao-conte
