@@ -1,4 +1,3 @@
-```javascript
 // ==========================================
 // GD LAVA CAR — JAVASCRIPT
 // ==========================================
@@ -142,8 +141,61 @@ if ("IntersectionObserver" in window) {
 
 
 // ==========================================
-// 5. ANO E MENSAGEM NO CONSOLE
+// 5. AMPLIAR FOTOS DA GALERIA E DO ANTES E DEPOIS
+// ==========================================
+
+const seletorFotosAmpliaveis =
+    "#trabalhos .foto-trabalho img, #antes-depois .comparacao-imagens img";
+const visualizador = document.getElementById("visualizador-imagem");
+const fotoAmpliada = document.getElementById("visualizador-foto");
+const legendaAmpliada = document.getElementById("visualizador-legenda");
+const botaoFecharVisualizador = document.getElementById("visualizador-fechar");
+
+if (visualizador instanceof HTMLDialogElement && fotoAmpliada && legendaAmpliada) {
+    const abrirVisualizador = (foto) => {
+        fotoAmpliada.src = foto.currentSrc || foto.src;
+        fotoAmpliada.alt = foto.alt;
+        legendaAmpliada.textContent = foto.alt;
+        visualizador.showModal();
+    };
+
+    document.querySelectorAll(seletorFotosAmpliaveis).forEach((foto) => {
+        const areaClicavel = foto.parentElement;
+
+        areaClicavel.tabIndex = 0;
+        areaClicavel.setAttribute("role", "button");
+        areaClicavel.setAttribute("aria-haspopup", "dialog");
+        areaClicavel.setAttribute("aria-controls", "visualizador-imagem");
+        areaClicavel.setAttribute("aria-label", `Ampliar imagem: ${foto.alt}`);
+        areaClicavel.addEventListener("click", () => abrirVisualizador(foto));
+        areaClicavel.addEventListener("keydown", (evento) => {
+            if (evento.key === "Enter" || evento.key === " ") {
+                evento.preventDefault();
+                abrirVisualizador(foto);
+            }
+        });
+    });
+
+    botaoFecharVisualizador?.addEventListener("click", () => visualizador.close());
+    visualizador.addEventListener("click", (evento) => {
+        if (evento.target === visualizador) {
+            visualizador.close();
+        }
+    });
+    visualizador.addEventListener("keydown", (evento) => {
+        if (evento.key === "Escape") {
+            evento.preventDefault();
+            visualizador.close();
+        }
+    });
+    visualizador.addEventListener("close", () => {
+        fotoAmpliada.removeAttribute("src");
+    });
+}
+
+
+// ==========================================
+// 6. ANO E MENSAGEM NO CONSOLE
 // ==========================================
 
 console.log("GD Lava Car carregado com sucesso! 🚗");
-```
